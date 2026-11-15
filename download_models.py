@@ -4,6 +4,7 @@ import shutil
 import zipfile
 
 from huggingface_hub import hf_hub_download
+BASE_DIR = Path(__file__).resolve().parent
 
 REPO_ID = "LojainOS/MIZAN"
 
@@ -40,6 +41,8 @@ def download(filename):
 
 
 def main():
+    import os
+    os.chdir(BASE_DIR)
     for remote, destination in IMAGE_MODELS.items():
         if destination.exists():
             print(f"Already exists: {destination}")
