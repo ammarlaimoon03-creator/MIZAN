@@ -1,0 +1,10 @@
+
+# Optional OCR engines
+easyocr
+paddleocr
+arabic-reshaper
+python-bidi
+pytesseract
+
+# Browser-based article extraction
+playwright
