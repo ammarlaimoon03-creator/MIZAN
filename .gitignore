@@ -31,3 +31,5 @@ title_version/
 # System
 .DS_Store
 Thumbs.db
+
+.venv-test/
