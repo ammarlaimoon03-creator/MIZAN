@@ -686,7 +686,7 @@ if GEMINI_AVAILABLE and GEMINI_API_KEY:
     try:
         genai.configure(api_key=GEMINI_API_KEY)
         gemini_model = genai.GenerativeModel("gemini-2.0-flash")
-        print(f"[SYSTEM] Gemini OK — model=gemini-2.0-flash | key=...{GEMINI_API_KEY[-6:]}")
+        print("[SYSTEM] Gemini API configured successfully")
     except Exception as _ge:
         print(f"[SYSTEM] Gemini init FAILED: {_ge}")
         gemini_model = None
