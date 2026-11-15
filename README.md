@@ -7,6 +7,38 @@ MIZAN is a collaborative graduation project that helps Arabic-speaking users ass
 
 > **Research prototype, not a certified fact-checking service.** Automated scores are decision-support signals, not proof that a claim is true or false. Some trusted-source integration was difficult to operate reliably during the graduation demonstration; manually populated news records and demonstration values were used to show the intended workflow. See [Limitations](#limitations-and-demo-disclosure).
 
+## Screenshots & Demo
+
+The screenshots below demonstrate MIZAN's research prototype. Automated scores are model outputs, not independently verified factual judgments. Some news-source evidence was manually seeded for demonstration purposes.
+
+### Homepage
+
+![MIZAN Homepage](screenshots/homepage.png)
+
+### Arabic News Verification
+
+![Arabic News Verification](screenshots/news-verification.png)
+
+*Example classification and evidence display. Source matches and credibility scores should not be interpreted as independent fact-checking.*
+
+### AI-Generated Image Detection
+
+![AI Image Detection](screenshots/image-detection.png)
+
+*Example prediction from the EfficientNet-B0 and ResNet-50 ensemble, not proof of an image's origin.*
+
+### AI Video Detection
+
+![AI Video Detection](screenshots/video-detection.png)
+
+*Frame-based synthetic-media analysis.*
+
+### X Browser Extension
+
+![MIZAN X Extension](screenshots/x-extension.png)
+
+*Browser extension connected to the local Flask backend. The displayed credibility score is a prototype output.*
+
 ## What MIZAN does
 
 | Feature | Description |
