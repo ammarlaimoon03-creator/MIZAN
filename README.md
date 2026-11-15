@@ -81,17 +81,23 @@ The report describes **30,000 balanced labeled Arabic news articles** (15,000 cr
 ## Repository layout
 
 ```text
+
 MIZAN/
-├── backend1.py                  # Flask application and inference orchestration
-├── MIZAN_extras.py              # Additional backend/admin/community features
-├── download_models.py          # Retrieves model artifacts from Hugging Face
+├── backend1.py
+├── MIZAN_extras.py
+├── download_models.py
+├── extension/
+│   ├── manifest.json
+│   ├── content.js
+│   ├── popup.html
+│   └── popup.js
 ├── templates/
-│   └── frontendA.html          # Web interface
+│   └── frontendA.html
 ├── requirements.txt
 ├── requirements-optional.txt
 ├── .gitignore
 └── README.md
-```
+
 
 The structure above describes the GitHub preparation copy. Model weights and large model directories are intentionally not committed.
 
@@ -136,7 +142,24 @@ python backend1.py
 
 Visit **http://127.0.0.1:5000**.
 
-**Setup verification status:** The project has been run locally with its model files already present. A full clean-environment dependency installation and fresh multi-gigabyte model download have **not yet been independently verified**. Some OCR/browser features may need system packages or additional configuration. The X extension is not included in the repository layout above unless its files are added.
+
+**Setup verification status:** Dependencies were successfully installed in a fresh Python 3.12 virtual environment. The Flask application started successfully, and both Arabic news-text analysis and AI-generated image detection were tested locally. The X browser extension was also tested with the local Flask backend. Model files were already available during these tests; a fresh download of all model artifacts has not yet been independently verified. Some optional OCR features may require additional system packages or configuration.
+
+
+## X Browser Extension Setup
+
+The extension is designed for local use with the MIZAN Flask backend.
+
+1. Start the Flask backend using `python backend1.py`.
+2. Open Google Chrome and navigate to `chrome://extensions`.
+3. Enable **Developer mode**.
+4. Select **Load unpacked**.
+5. Choose the `extension` folder from this repository.
+6. Open X (Twitter) and use the MIZAN verification control on a post.
+
+The extension communicates with the local backend at `http://127.0.0.1:5000`. Keep the Flask server running while using it.
+
+**Note:** The extension is a research prototype and is not published on the Chrome Web Store.
 
 ## Limitations and demo disclosure
 
