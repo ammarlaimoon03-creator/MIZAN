@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "MIZAN AI",
+  "version": "1.4",
+  "description": "Detect fake or misleading content on X / Twitter using your local MIZAN AI model.",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "http://localhost:5000/*"
+  ],
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.x.com/*", "*://*.twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
